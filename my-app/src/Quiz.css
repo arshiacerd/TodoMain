@@ -32,6 +32,7 @@ color: black;
 .input_login:focus{
     outline: none;
 }
+
 .main{
     width: 50vw;
     height: 70vh;
@@ -72,6 +73,18 @@ color: black;
     border: 1px solid transparent   ;
     border-radius: 30px;
     
+}
+.h3_name{
+   
+    color: #7c795d; 
+    font-family: 'Trocchi', serif; 
+    font-size: 25px; 
+    font-weight: normal; 
+    line-height: 48px; 
+    
+    
+    
+   
 }
 .remark_style{
     color: rgb(211, 32, 32);

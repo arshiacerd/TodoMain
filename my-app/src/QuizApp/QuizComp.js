@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react';
-import { useNavigate ,Link} from 'react-router-dom';
+import { useNavigate ,Link, useLocation} from 'react-router-dom';
 import { createContext } from 'react'
 
 // import questions from './Questions'
@@ -9,7 +9,8 @@ function QuizComp() {
     
    const navigate =  useNavigate()
     var no=1;
-    
+   const location=  useLocation()
+   var name = location.state.fname
     var [first, setfirst] = useState(no)
     var [score, setScore] = useState(0)
     const [check, setCheck] = useState("")
@@ -47,13 +48,14 @@ function QuizComp() {
             q:"Who is making the Web standards?",
             o1:"Mozilla",
             o2:"Microsoft",
-            o3:"Google"
+            o3:"World Wide Web Consortium"
         },
         {
             id:5,
             q:"What does HTML stand for",
-            o1:"Hyper Text Markup Language",
-            o2:"Home Tool Markup Language",
+            o1:"Home Tool Markup Language",
+            o2:"Hyper Text Markup Language",
+
             o3:"HyperLinks and Text Markup Language"
         }
     ]  
@@ -119,6 +121,10 @@ else if(e.target.id==="op2")
             {
                 setScore(score=score+1)
             }
+            else if(check==="World Wide Web Consortium")
+            {
+                setScore(score=score+1)
+            }
            
         
         
@@ -143,6 +149,7 @@ else if(e.target.id==="op2")
             <div className='container'>
             <div className='main'>
             <div className='QuesHead'>
+            <h3 className='h3_name'>Welcome {name}</h3>
         <h1 key={index}><span>Q{filteredData.id}.</span>{filteredData.q}</h1>
          </div>
            <ul>

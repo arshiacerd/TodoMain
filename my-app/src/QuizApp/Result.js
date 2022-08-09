@@ -8,7 +8,7 @@ function Result() {
   //  console.log(location)
 var score = location.state.name;
 
- var per = (score * 100 )/ 3;
+ var per = (score * 100 )/ 5;
  
   return (
     <>
@@ -18,7 +18,7 @@ var score = location.state.name;
       <h1 className='h1_result'>Result</h1>
       
       
-    <h3 className='score_style '>    {score}  of 3</h3>
+    <h3 className='score_style '>    {score}  of 5</h3>
     <h3 className='h3_result'>{per}% Score</h3>
 <h3 className='remark_style '>{per>=80 ? "Exceptional 🥇"  : per>=70 && per<80? "Excellent 🥈" : per>=60 && per<70? "Good 👍" : per>=50 && per<60? "Satisfactory  😊" : "Well, you have a lot of studying to do 👎" } </h3>
       

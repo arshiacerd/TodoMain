@@ -43,9 +43,12 @@ function Login() {
 
   if(name === "Arshia" && pass == 123)
   {
-    alert("nbnm");
-navigate("/quiz");
+   
+navigate("/quiz" , {state:{id:1,fname:name}});
     //  <Link to="/quiz"></Link>
+  }
+  else {
+    alert("Incorrect username or passeord")
   }
 
 
